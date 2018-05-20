@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components';
 import Helmet from 'react-helmet'
 import MainNav from '../components/main-nav';
+import Footer from '../components/footer';
 
 import './index.css'
+import '../assets/globalCSS/global-css.css'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -19,6 +21,7 @@ const Layout = ({ children, data }) => (
     <PageContainer>
       {children()}
     </PageContainer>
+    <Footer />
   </div>
 )
 

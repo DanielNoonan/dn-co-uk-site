@@ -1,0 +1,17 @@
+/* .background-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../images/selfie.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    overflow: hidden;    
+} */
+  
+.background-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../images/selfie.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 60% top;
+}
