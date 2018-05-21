@@ -10,22 +10,27 @@ const MainNav = () => {
                 Picture of camera gear
             </NavLogo> */}
             <NavTitle>
-                <h1>Daniel.Noonan</h1>
-                <h2>Photography</h2>
+                <Link to='/'>
+                    <h1>Daniel.Noonan</h1>
+                    {/* <h2>Photography</h2> */}
+                </Link>
             </NavTitle>
             <NavItemsWrapper>
                 <NavItems>
                     <li>
-                        <Link to='/' >HOME</Link>
+                        <Link exact to='/' activeStyle={{color: 'red'}} >HOME</Link>
                     </li>
                     <li>
-                        <Link to='/about' >ABOUT ME</Link>
+                        <Link exact to='/about' activeStyle={{color: 'orange'}} >ABOUT ME</Link>
+                    </li>
+                    <li>
+                        <Link exact to='/coding' activeStyle={{color: 'green'}} >CODING</Link>
+                    </li>
+                    <li>
+                        <a>PHOTOGRAPHY & CLIENT GALLERIES</a>
                     </li>
                     <li>
                         <a>CONTACT</a>
-                    </li>
-                    <li>
-                        <a>CLIENT GALLERIES</a>
                     </li>
                 </NavItems>
             </NavItemsWrapper>
@@ -60,6 +65,10 @@ const NavLogo = styled.div`
 const NavTitle = styled.div`
 // border: 1px solid black;
 
+    a {
+        text-decoration: none;
+    }
+
     h1 {
         cursor: pointer;
         color: white;
@@ -90,7 +99,7 @@ const NavItems = styled.ul`
     li {
 // border: 1px solid black;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-        margin-left: 10px;
+        margin-left: 15px;
         margin-bottom: 0;
 
         a {
@@ -100,6 +109,10 @@ const NavItems = styled.ul`
             text-decoration: none;
             color: white;
             cursor: pointer;
+
+            &:link {
+                color: green;
+            }
         }
     }
 `
